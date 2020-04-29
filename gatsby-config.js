@@ -1,8 +1,10 @@
 module.exports = {
   siteMetadata: {
-    name: `Fabian Schultz`,
-    title: `Gatsby Deck`,
-    date: `July 30, 2018`,
+    name: `Rizal Fakhri`,
+    title: `Ini judul deck nya`,
+    date: `28 April 2020`,
+    blogUrl: `https://rizalfakhri.id`,
+    blogName: 'rizalfakhri.id'
   },
   plugins: [
     `gatsby-plugin-layout`,
@@ -34,5 +36,59 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+        resolve: `gatsby-plugin-google-fonts`,
+        options: {
+            fonts: [
+              `Press Start 2P`,
+              `IBM Plex Mono`,
+              `Share Tech Mono`,
+              `Fira Code`
+            ],
+            display: 'swap'
+        }
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+              classPrefix: "language-",
+              inlineCodeMarker: null,
+              aliases: {},
+              showLineNumbers: false,
+              noInlineHighlight: false,
+              languageExtensions: [
+                {
+                  language: "superscript",
+                  extend: "javascript",
+                  definition: {
+                    superscript_types: /(SuperType)/,
+                  },
+                  insertBefore: {
+                    function: {
+                      superscript_keywords: /(superif|superelse)/,
+                    },
+                  },
+                },
+              ],
+              // Customize the prompt used in shell output
+              // Values below are default
+              prompt: {
+                user: "root",
+                host: "localhost",
+                global: false,
+              },
+              // By default the HTML entities <>&'" are escaped.
+              // Add additional HTML escapes by providing a mapping
+              // of HTML entities and their escape value IE: { '}': '&#123;' }
+              escapeEntities: {},
+            },
+          },
+        ],
+      },
+    },
   ],
 };

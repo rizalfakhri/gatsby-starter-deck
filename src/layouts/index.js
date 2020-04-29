@@ -7,14 +7,37 @@ import Transition from '../components/transition';
 
 import './index.css';
 
-const Header = ({ name, title, date }) => (
+const Header = ({ name, title, date, blogName, blogUrl }) => (
   <header>
     <Link to="/1">
       <span>{name}</span> — {title}
     </Link>
+
+
     <time>{date}</time>
+
   </header>
 );
+
+const Footer = ({ name, title, date, blogName, blogUrl }) => (
+  <footer>
+
+
+    <h4 style={{
+      opacity: .1,
+      bottom: 0,
+      right: `10px`,
+      marginLeft: `auto`,
+      textTransform: `uppercase`
+    }}>
+
+      <a href={blogUrl}>{blogName}</a>
+
+    </h4>
+
+  </footer>
+);
+
 
 class TemplateWrapper extends Component {
   NEXT = [13, 32, 39];
@@ -65,6 +88,8 @@ class TemplateWrapper extends Component {
           name={site.siteMetadata.name}
           title={site.siteMetadata.title}
           date={site.siteMetadata.date}
+          blogUrl={site.siteMetadata.blogUrl}
+          blogName={site.siteMetadata.blogName}
         />
         <Swipeable
           onSwipedLeft={this.swipeLeft}
@@ -74,6 +99,13 @@ class TemplateWrapper extends Component {
             <div id="slide" style={{'width': '100%'}}>{children}</div>
           </Transition>
         </Swipeable>
+        <Footer
+          name={site.siteMetadata.name}
+          title={site.siteMetadata.title}
+          date={site.siteMetadata.date}
+          blogUrl={site.siteMetadata.blogUrl}
+          blogName={site.siteMetadata.blogName}
+        />
       </div>
     );
   }
@@ -93,6 +125,8 @@ export default props => (
             name
             title
             date
+            blogUrl
+            blogName
           }
         }
         allSlide {

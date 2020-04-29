@@ -1,25 +1,68 @@
-# Gatsby Deck
-
-Create presentations using Gatsby & React.
+# INI JUDUL DECK NYA
 
 ---
 
-> Inscrutable icons litter the face of the devices even though the research
-> community has long demonstrated that people cannot remember the meaning of
-> more than a small number of icons […] Who can remember what each icon
-> means? Not me.
-> <cite>Don Norman</cite>
+> Ceritanya ini quote dari orang terkenal
+> biar slide nya seolah-olah ber-intelek
+> <cite>Nama Orangnya</cite>
 
 ---
 
-# 🤫
+Coba liat code dibawah deh
+
+```php
+<?php
+
+use Psr\ContainerInterface;
+
+app(ContainerInterface::class)->getBindings();
+
+```
+---
+
+#### KEREN KAN ADA CODE HIGHLIGHTER NYA 🤓
 
 ---
 
-## Slides are written in Markdown!
+#### COBA DEH BROWSERNYA DI RESIZE
 
-Here's the source of the first slide:
+```php
+<?php
 
-    # Gatsby Deck
+use Psr\ContainerInterface;
 
-    Create presentations using Gatsby & React.
+app(ContainerInterface::class)->getBindings();
+
+```
+
+---
+
+#### HEHEHE 😀
+
+---
+
+Bisa Embed Video juga lho...
+
+<iframe width="100%" height="450" src="https://www.youtube.com/embed/N5WojMutddQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+---
+
+Terus, coba deh liat di pojok kiri & kanan atas, & kanan bawah.
+
+---
+
+Edit aja di `gatsby-config.js`
+
+```js
+siteMetadata: {
+    name: `Nama Authornya`,
+    title: `Ini judul deck nya`,
+    date: `28 April 2020`,
+    blogUrl: `https://rizalfakhri.id`,
+    blogName: 'rizalfakhri.id'
+}
+```
+
+---
+
+<marquee>JANGAN LUPA MARQUEEEEE</marquee>
